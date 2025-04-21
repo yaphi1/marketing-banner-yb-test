@@ -1,7 +1,6 @@
-import { AIRTABLE_TOKEN } from '@/secrets/airtable_token';
 import Airtable, { FieldSet, Record } from 'airtable';
 
-const base = new Airtable({ apiKey: AIRTABLE_TOKEN }).base('appZPplPZ5Q1i29h1');
+const base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN }).base('appZPplPZ5Q1i29h1');
 
 async function getBannerData() {
   const bannerData = await new Promise((resolve, reject) => {
