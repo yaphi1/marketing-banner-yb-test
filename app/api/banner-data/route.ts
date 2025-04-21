@@ -4,7 +4,7 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_TOKEN }).base('appZPplP
 
 async function getBannerData() {
   const bannerData = await new Promise((resolve, reject) => {
-    let banners: Array<Record<FieldSet>> = [];
+    const banners: Array<Record<FieldSet>> = [];
 
     base('Banner Schedule').select({
       view: 'Grid view'
